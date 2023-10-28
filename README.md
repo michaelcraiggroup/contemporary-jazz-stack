@@ -1,4 +1,4 @@
-# Remix Grunge Stack
+# Remix Contemporary Jazz Stack
 
 ![The Remix Contemporary Jazz Stack](https://github.com/michaelcraiggroup/contemporary-jazz-stack/assets/147206833/dd342508-24b1-4c51-9c81-4a8efc80ef72)
 
