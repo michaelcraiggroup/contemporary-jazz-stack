@@ -1,6 +1,7 @@
 # Remix Grunge Stack
 
-![The Remix Grunge Stack](https://repository-images.githubusercontent.com/463325363/edae4f5b-1a13-47ea-b90c-c05badc2a700)
+![The Remix Contemporary Jazz Stack](https://github.com/michaelcraiggroup/contemporary-jazz-stack/assets/147206833/dd342508-24b1-4c51-9c81-4a8efc80ef72)
+
 
 Learn more about [Remix Stacks](https://remix.run/stacks).
 
@@ -16,12 +17,13 @@ npx create-remix@latest --template remix-run/grunge-stack
 - Email/Password Authentication with [cookie-based sessions](https://remix.run/utils/sessions#createcookiesessionstorage)
 - DynamoDB access via [`arc.tables`](https://arc.codes/docs/en/reference/runtime-helpers/node.js#arc.tables)
 - Styling with [Tailwind](https://tailwindcss.com/)
-- End-to-end testing with [Cypress](https://cypress.io)
+- End-to-end testing with [Playwright](https://playwright.dev/)
 - Local third party request mocking with [MSW](https://mswjs.io)
 - Unit testing with [Vitest](https://vitest.dev) and [Testing Library](https://testing-library.com)
 - Code formatting with [Prettier](https://prettier.io)
 - Linting with [ESLint](https://eslint.org)
 - Static Types with [TypeScript](https://typescriptlang.org)
+- Runtime schema validation with [zod](https://github.com/colinhacks/zod)
 
 Not a fan of bits of the stack? Fork it, change it, and use `npx create-remix --template your/repo`! Make it your own.
 
@@ -105,13 +107,11 @@ We use GitHub Actions for continuous integration and deployment. Anything that g
 
 ## Testing
 
-### Cypress
+### Playwright
 
-We use Cypress for our End-to-End tests in this project. You'll find those in the `cypress` directory. As you make changes, add to an existing file or create a new file in the `cypress/e2e` directory to test your changes.
+We use Playwright for our End-to-End tests in this project. You'll find those in the `tests/e2e` directory. As you make changes, add to an existing file or create a new file in the `test/e2e` directory to test your changes.
 
-We use [`@testing-library/cypress`](https://testing-library.com/cypress) for selecting elements on the page semantically.
-
-To run these tests in development, run `npm run test:e2e:dev` which will start the dev server for the app as well as the Cypress client. Make sure the database is running in docker as described above.
+To run these tests in development, run `npm run test:e2e:dev` which will start the dev server for the app as well as the Playwright client. Make sure the database is running in docker as described above.
 
 We have a utility for testing authenticated features without having to go through the login flow:
 
