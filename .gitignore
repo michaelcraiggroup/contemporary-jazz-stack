@@ -17,6 +17,3 @@ preferences.arc
 sam.json
 sam.yaml
 .env
-
-/cypress/screenshots
-/cypress/videos

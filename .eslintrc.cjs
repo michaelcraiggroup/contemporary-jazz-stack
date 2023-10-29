@@ -1,5 +1,5 @@
 /**
- * This is intended to be a basic starting point for linting in the Grunge Stack.
+ * This is intended to be a basic starting point for linting in the Contemporary Jazz Stack.
  * It relies on recommended configs out of the box for simplicity, but you can
  * and should modify this configuration to best suit your team's needs.
  */
@@ -116,13 +116,6 @@ module.exports = {
           version: 28,
         },
       },
-    },
-
-    // Cypress
-    {
-      files: ["cypress/**/*.ts"],
-      plugins: ["cypress"],
-      extends: ["plugin:cypress/recommended", "prettier"],
     },
 
     // Node
