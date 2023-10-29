@@ -9,11 +9,9 @@ export default {
   serverBuildPath: "server/index.mjs",
   serverModuleFormat: "esm",
   routes: (defineRoutes) =>
-    defineRoutes((route) => {
+    defineRoutes(() => {
       if (process.env.NODE_ENV === "production") return;
 
       console.log("⚠️  Test routes enabled.");
-
-      const appDir = path.join(process.cwd(), "app");
     }),
 };
