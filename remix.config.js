@@ -6,10 +6,14 @@ export default {
   server: "server.ts",
   serverBuildPath: "server/index.mjs",
   serverModuleFormat: "esm",
-  routes: (defineRoutes) =>
-    defineRoutes(() => {
-      if (process.env.NODE_ENV === "production") return;
-
-      console.log("⚠️  Test routes enabled.");
-    }),
+  routes: async defineRoutes => {
+		return flatRoutes('routes', defineRoutes, {
+			ignoredRouteFiles: [
+				'.*',
+				'**/*.css',
+				'**/*.test.{js,jsx,ts,tsx}',
+				'**/__*.*',
+			],
+		})
+	},
 };
