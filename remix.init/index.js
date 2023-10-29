@@ -108,7 +108,7 @@ const main = async ({ packageManager, rootDirectory }) => {
   await Promise.all([
     fs.writeFile(
       APP_ARC_PATH,
-      appArc.replace("grunge-stack-template", APP_NAME),
+      appArc.replace("contemporary-jazz-stack-template", APP_NAME),
     ),
     fs.writeFile(ENV_PATH, newEnv),
     fs.writeFile(README_PATH, newReadme),

@@ -1,5 +1,5 @@
 @app
-grunge-stack-template
+contemporary-jazz-stack-template
 
 @aws
 runtime nodejs18.x
